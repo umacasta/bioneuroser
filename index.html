@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Descubrí la mentira en 60 segundos</title>
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
     body{
       font-family:Arial, Helvetica, sans-serif;
-      background:#f6f3ff;
+      background:#f7f4ff;
       color:#111827;
       overflow-x:hidden;
     }
@@ -18,16 +24,41 @@
     .bg-blur{
       position:fixed;
       border-radius:50%;
-      filter:blur(120px);
+      filter:blur(140px);
       z-index:0;
       opacity:.45;
     }
 
-    .blur-1{width:360px;height:360px;background:#a78bfa;top:-100px;left:-90px}
-    .blur-2{width:340px;height:340px;background:#60a5fa;top:420px;right:-110px}
-    .blur-3{width:300px;height:300px;background:#f0abfc;bottom:40px;left:35%}
+    .blur-1{
+      width:420px;
+      height:420px;
+      background:#a855f7;
+      top:-120px;
+      left:-120px;
+    }
 
-    header, main, footer{position:relative;z-index:2}
+    .blur-2{
+      width:360px;
+      height:360px;
+      background:#06b6d4;
+      top:420px;
+      right:-120px;
+    }
+
+    .blur-3{
+      width:340px;
+      height:340px;
+      background:#f472b6;
+      bottom:0;
+      left:35%;
+    }
+
+    header,
+    main,
+    footer{
+      position:relative;
+      z-index:2;
+    }
 
     .header{
       max-width:1250px;
@@ -38,93 +69,165 @@
       align-items:center;
     }
 
-    .logo{width:150px}
+    .logo{
+      width:150px;
+    }
 
-    .top-btn,.main-btn{
+    .top-btn,
+    .main-btn{
       display:inline-block;
-      background:linear-gradient(90deg,#8b5cf6,#4f46e5,#06b6d4);
+
+      background:
+      linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6366f1,
+        #06b6d4
+      );
+
       color:white;
       text-decoration:none;
-      padding:16px 28px;
+
+      padding:16px 30px;
+
       border-radius:18px;
+
       font-weight:800;
-      box-shadow:0 12px 30px rgba(124,58,237,.25);
+
+      box-shadow:
+      0 14px 40px rgba(99,102,241,.28);
+
+      transition:.3s;
+    }
+
+    .main-btn:hover,
+    .top-btn:hover{
+      transform:translateY(-3px);
     }
 
     .hero{
       max-width:1250px;
       margin:auto;
+
       min-height:85vh;
+
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:55px;
+
+      gap:60px;
+
       align-items:center;
-      padding:40px 20px 80px;
+
+      padding:40px 20px 90px;
     }
 
     .pill{
       display:inline-block;
+
       background:white;
+
       color:#7c3aed;
+
       padding:10px 18px;
+
       border-radius:999px;
+
       font-size:13px;
+
       font-weight:800;
+
       margin-bottom:24px;
-      box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+      box-shadow:
+      0 10px 30px rgba(0,0,0,.05);
     }
 
-    .center{display:table;margin:0 auto 24px}
+    .center{
+      display:table;
+      margin:0 auto 24px;
+    }
 
     h1{
-      font-size:72px;
+      font-size:76px;
       line-height:.95;
       margin-bottom:26px;
       font-weight:900;
       letter-spacing:-2px;
     }
 
-    h1 strong{color:#7c3aed}
+    h1 strong{
+      color:#7c3aed;
+    }
 
     .hero p{
       font-size:22px;
-      line-height:1.6;
+      line-height:1.7;
       color:#4b5563;
       margin-bottom:28px;
-      max-width:590px;
+      max-width:600px;
     }
 
     .mini-benefits{
       display:flex;
       flex-wrap:wrap;
       gap:14px;
-      margin-bottom:32px;
+      margin-bottom:34px;
     }
 
     .mini-benefits span{
-      background:white;
-      padding:11px 16px;
-      border-radius:14px;
+      background:
+      rgba(255,255,255,.85);
+
+      backdrop-filter:blur(12px);
+
+      padding:12px 18px;
+
+      border-radius:16px;
+
       font-size:14px;
-      box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+      box-shadow:
+      0 10px 30px rgba(0,0,0,.05);
     }
 
-    .hero small{display:block;color:#6b7280;margin-top:8px}
+    .hero small{
+      display:block;
+      color:#6b7280;
+      margin-top:10px;
+    }
 
     .video-placeholder{
       width:100%;
-      min-height:420px;
-      background:linear-gradient(135deg,#ffffff,#f3e8ff);
-      border-radius:34px;
+      min-height:430px;
+
+      background:
+      linear-gradient(
+        135deg,
+        rgba(255,255,255,.92),
+        rgba(255,255,255,.72)
+      );
+
+      border-radius:36px;
+
       display:flex;
       align-items:center;
       justify-content:center;
+
       text-align:center;
-      box-shadow:0 25px 70px rgba(79,70,229,.15);
+
+      box-shadow:
+      0 30px 80px rgba(99,102,241,.14);
+
+      border:
+      1px solid rgba(255,255,255,.55);
+
       color:#7c3aed;
-      font-size:24px;
+
+      font-size:26px;
+
       font-weight:900;
-      border:1px solid rgba(124,58,237,.12);
+
+      backdrop-filter:blur(16px);
     }
 
     .video-note{
@@ -138,69 +241,139 @@
       max-width:1250px;
       margin:auto;
       padding:90px 20px;
+      position:relative;
     }
 
     .section h2{
       text-align:center;
-      font-size:50px;
+
+      font-size:54px;
+
       line-height:1.05;
+
       margin-bottom:16px;
+
       letter-spacing:-1px;
     }
 
     .section-subtitle{
       text-align:center;
+
       color:#6b7280;
+
       font-size:20px;
+
       max-width:760px;
-      margin:0 auto 55px;
-      line-height:1.6;
+
+      margin:0 auto 60px;
+
+      line-height:1.7;
     }
 
-    .cards-grid,.learn-grid,.reviews-grid{
+    .cards-grid,
+    .learn-grid,
+    .reviews-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
+      grid-template-columns:
+      repeat(auto-fit,minmax(260px,1fr));
+
+      gap:28px;
     }
 
-    .card,.learn-grid div,.review-card,.faq-item{
-      background:rgba(255,255,255,.86);
-      border-radius:28px;
-      padding:30px;
-      box-shadow:0 14px 45px rgba(0,0,0,.06);
-      border:1px solid rgba(124,58,237,.08);
+    .card,
+    .learn-grid div,
+    .review-card,
+    .faq-item{
+
+      background:
+      linear-gradient(
+        135deg,
+        rgba(255,255,255,.92),
+        rgba(255,255,255,.74)
+      );
+
+      backdrop-filter:blur(14px);
+
+      border:
+      1px solid rgba(255,255,255,.6);
+
+      border-radius:30px;
+
+      padding:32px;
+
+      box-shadow:
+      0 20px 60px rgba(124,58,237,.10),
+      0 10px 35px rgba(0,0,0,.05);
+
+      transition:.35s;
     }
 
-    .card h3,.learn-grid h3{
-      font-size:21px;
-      margin-bottom:12px;
-      color:#111827;
+    .card:hover,
+    .learn-grid div:hover,
+    .review-card:hover{
+      transform:translateY(-6px);
+
+      box-shadow:
+      0 30px 80px rgba(124,58,237,.16),
+      0 14px 45px rgba(0,0,0,.08);
     }
 
-    .card p,.learn-grid p,.review-card p,.faq-item p{
+    .icon{
+      width:60px;
+      height:60px;
+
+      border-radius:18px;
+
+      background:
+      linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6366f1,
+        #06b6d4
+      );
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      color:white;
+
+      font-weight:900;
+
+      font-size:22px;
+
+      margin-bottom:22px;
+
+      box-shadow:
+      0 12px 30px rgba(99,102,241,.28);
+    }
+
+    .card h3,
+    .learn-grid h3{
+      font-size:22px;
+      margin-bottom:14px;
+      letter-spacing:-.4px;
+    }
+
+    .card p,
+    .learn-grid p,
+    .review-card p,
+    .faq-item p{
       color:#4b5563;
-      line-height:1.65;
+      line-height:1.75;
       font-size:16px;
     }
 
     .soft-box{
-      background:rgba(255,255,255,.45);
-      border-radius:44px;
-      backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,.5);
-    }
+      background:
+      rgba(255,255,255,.40);
 
-    .icon{
-      width:46px;
-      height:46px;
-      border-radius:16px;
-      background:linear-gradient(135deg,#8b5cf6,#06b6d4);
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:900;
-      margin-bottom:18px;
+      backdrop-filter:blur(14px);
+
+      border-radius:44px;
+
+      border:
+      1px solid rgba(255,255,255,.5);
     }
 
     .review-card .stars{
@@ -229,19 +402,39 @@
     .price-section{
       max-width:1250px;
       margin:auto;
+
       display:grid;
       grid-template-columns:1fr 420px;
+
       gap:36px;
+
       padding:90px 20px;
+
       align-items:center;
     }
 
-    .price-left,.price-card{
-      background:rgba(255,255,255,.86);
+    .price-left,
+    .price-card{
+
+      background:
+      linear-gradient(
+        135deg,
+        rgba(255,255,255,.92),
+        rgba(255,255,255,.74)
+      );
+
+      backdrop-filter:blur(14px);
+
       border-radius:38px;
+
       padding:46px;
-      box-shadow:0 18px 55px rgba(0,0,0,.07);
-      border:1px solid rgba(124,58,237,.08);
+
+      box-shadow:
+      0 20px 60px rgba(124,58,237,.10),
+      0 10px 35px rgba(0,0,0,.05);
+
+      border:
+      1px solid rgba(255,255,255,.55);
     }
 
     .price-left h2{
@@ -250,7 +443,9 @@
       margin:20px 0;
     }
 
-    .price-left ul{list-style:none}
+    .price-left ul{
+      list-style:none;
+    }
 
     .price-left li{
       margin-bottom:16px;
@@ -258,10 +453,12 @@
       font-size:18px;
     }
 
-    .price-card{text-align:center}
+    .price-card{
+      text-align:center;
+    }
 
     .price-card h3{
-      font-size:72px;
+      font-size:74px;
       margin:16px 0 8px;
     }
 
@@ -294,7 +491,7 @@
     }
 
     footer h2{
-      font-size:52px;
+      font-size:54px;
       line-height:1.05;
       margin-bottom:18px;
     }
@@ -302,19 +499,53 @@
     footer p{
       color:#6b7280;
       margin-bottom:30px;
+      max-width:850px;
+      margin-left:auto;
+      margin-right:auto;
+      line-height:1.7;
     }
 
     @media(max-width:900px){
-      .hero,.price-section{grid-template-columns:1fr}
-      .hero{text-align:center}
-      .hero p{margin-left:auto;margin-right:auto}
-      .mini-benefits{justify-content:center}
-      h1{font-size:46px}
-      .section h2,.price-left h2,footer h2{font-size:34px}
-      .video-placeholder{min-height:280px}
-      .top-btn{display:none}
+
+      .hero,
+      .price-section{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero p{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .mini-benefits{
+        justify-content:center;
+      }
+
+      h1{
+        font-size:48px;
+      }
+
+      .section h2,
+      .price-left h2,
+      footer h2{
+        font-size:36px;
+      }
+
+      .video-placeholder{
+        min-height:280px;
+      }
+
+      .top-btn{
+        display:none;
+      }
     }
+
   </style>
+
 </head>
 
 <body>
@@ -324,15 +555,24 @@
   <div class="bg-blur blur-3"></div>
 
   <header class="header">
+
     <img src="logo.png" class="logo" alt="Logo">
-    <a href="#" class="top-btn">ACCESO AHORA</a>
+
+    <a href="#" class="top-btn">
+      ACCESO AHORA
+    </a>
+
   </header>
 
   <main>
 
     <section class="hero">
+
       <div>
-        <span class="pill">CURSO ONLINE | ACCESO INMEDIATO</span>
+
+        <span class="pill">
+          CURSO ONLINE | ACCESO INMEDIATO
+        </span>
 
         <h1>
           DESCUBRÍ LA<br>
@@ -341,265 +581,526 @@
         </h1>
 
         <p>
-          Aprendé a detectar contradicciones, señales ocultas y patrones de manipulación
-          en conversaciones reales de la vida diaria.
+          Aprendé a identificar cuándo alguien te está mintiendo
+          a través del lenguaje corporal, las reacciones
+          y las contradicciones más comunes.
         </p>
 
         <div class="mini-benefits">
+
           <span>15 videos completos</span>
           <span>Bonus incluidos</span>
           <span>Acceso inmediato</span>
+
         </div>
 
-        <a href="#" class="main-btn">QUIERO ACCEDER AHORA →</a>
-        <small>Curso práctico, directo y explicado paso a paso.</small>
+        <a href="#" class="main-btn">
+          QUIERO ACCEDER AHORA →
+        </a>
+
+        <small>
+          Curso práctico, visual y explicado paso a paso.
+        </small>
+
       </div>
 
       <div>
+
         <div class="video-placeholder">
-          VIDEO DEL CREADOR<br>
-          <span style="font-size:15px;font-weight:600;color:#6b7280;margin-top:8px;display:block;">
-            Próximamente reemplazamos este bloque por tu video.
-          </span>
+
+          VIDEO DEL CREADOR
+
         </div>
-        <p class="video-note">Mirá la presentación del creador del curso</p>
+
+        <p class="video-note">
+          Mirá la presentación del creador del curso
+        </p>
+
       </div>
+
     </section>
 
     <section class="section">
-      <span class="pill center">ESTE CURSO ES PARA VOS SI...</span>
 
-      <h2>No querés seguir ignorando señales</h2>
+      <span class="pill center">
+        ESTE CURSO ES PARA VOS SI...
+      </span>
+
+      <h2>
+        No querés seguir ignorando señales
+      </h2>
 
       <p class="section-subtitle">
-        Aprendé a leer mejor conversaciones, actitudes y contradicciones sin volverte paranoico
-        ni depender solamente de tu intuición.
+        Aprendé a leer mejor conversaciones,
+        actitudes y contradicciones sin depender solamente de tu intuición.
       </p>
 
       <div class="cards-grid">
+
         <div class="card">
+
           <div class="icon">1</div>
+
           <h3>Sentís que algo no cierra</h3>
-          <p>Pero no sabés cómo explicar qué fue lo que te hizo dudar.</p>
+
+          <p>
+            Pero no sabés exactamente qué fue lo que te hizo dudar.
+          </p>
+
         </div>
 
         <div class="card">
+
           <div class="icon">2</div>
+
           <h3>Ya te mintieron antes</h3>
-          <p>Y después pensaste: “había señales y no las vi”.</p>
+
+          <p>
+            Y después pensaste:
+            “había señales y no las vi”.
+          </p>
+
         </div>
 
         <div class="card">
+
           <div class="icon">3</div>
-          <h3>Querés confiar más en vos</h3>
-          <p>Aprendiendo a diferenciar intuición real de inseguridad.</p>
+
+          <h3>Querés entender el lenguaje corporal</h3>
+
+          <p>
+            Aprender qué expresiones y reacciones son difíciles de fingir.
+          </p>
+
         </div>
 
         <div class="card">
+
           <div class="icon">4</div>
-          <h3>Te cuesta leer actitudes</h3>
-          <p>Gestos, silencios, cambios de versión o respuestas evasivas.</p>
+
+          <h3>Te cansaste de darte cuenta tarde</h3>
+
+          <p>
+            Querés reconocer contradicciones antes de que sea demasiado tarde.
+          </p>
+
         </div>
 
         <div class="card">
+
           <div class="icon">5</div>
-          <h3>Querés protegerte mejor</h3>
-          <p>En relaciones, amistades, trabajo o conversaciones importantes.</p>
+
+          <h3>Querés leer mejor a las personas</h3>
+
+          <p>
+            Gestos, pausas, tensión, incomodidad y cambios de comportamiento.
+          </p>
+
         </div>
 
         <div class="card">
+
           <div class="icon">6</div>
+
           <h3>No querés caer en manipulación</h3>
-          <p>Aprendé a detectar cuando alguien intenta confundirte emocionalmente.</p>
+
+          <p>
+            Aprendé a detectar cuando alguien intenta confundirte emocionalmente.
+          </p>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="section soft-box">
-      <span class="pill center">QUÉ VAS A LOGRAR</span>
 
-      <h2>Vas a observar conversaciones de otra manera</h2>
+      <span class="pill center">
+        QUÉ VAS A LOGRAR
+      </span>
+
+      <h2>
+        Vas a observar conversaciones de otra manera
+      </h2>
 
       <p class="section-subtitle">
-        El objetivo no es acusar a todo el mundo. Es aprender a ver patrones que antes pasaban desapercibidos.
+        El objetivo no es acusar a todo el mundo.
+        Es aprender a reconocer señales reales de mentira.
       </p>
 
       <div class="learn-grid">
+
         <div>
+
           <div class="icon">✓</div>
+
           <h3>Detectar contradicciones</h3>
-          <p>Cuando una historia cambia, se acomoda o pierde coherencia.</p>
+
+          <p>
+            Cuando una historia cambia o pierde coherencia.
+          </p>
+
         </div>
 
         <div>
+
           <div class="icon">✓</div>
-          <h3>Leer señales no verbales</h3>
-          <p>Gestos, tensión, pausas, incomodidad y cambios de energía.</p>
+
+          <h3>Leer expresiones difíciles de fingir</h3>
+
+          <p>
+            Gestos, tensión y reacciones que muchas personas no controlan.
+          </p>
+
         </div>
 
         <div>
+
           <div class="icon">✓</div>
+
           <h3>Reconocer evasivas</h3>
-          <p>Cuando alguien responde sin responder realmente.</p>
+
+          <p>
+            Cuando alguien responde sin responder realmente.
+          </p>
+
         </div>
 
         <div>
+
           <div class="icon">✓</div>
-          <h3>Identificar manipulación</h3>
-          <p>Culpa, confusión, victimización o cambio de foco.</p>
+
+          <h3>Entender reacciones emocionales</h3>
+
+          <p>
+            Cómo cambia el comportamiento cuando alguien oculta algo.
+          </p>
+
         </div>
 
         <div>
+
           <div class="icon">✓</div>
+
           <h3>Hacer mejores preguntas</h3>
-          <p>Preguntas simples que revelan más de lo que parece.</p>
+
+          <p>
+            Preguntas que revelan más de lo que parece.
+          </p>
+
         </div>
 
         <div>
+
           <div class="icon">✓</div>
-          <h3>Reaccionar con calma</h3>
-          <p>Saber qué hacer cuando detectás una señal sospechosa.</p>
+
+          <h3>Reaccionar con más seguridad</h3>
+
+          <p>
+            Saber qué hacer cuando detectás una señal sospechosa.
+          </p>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section">
-      <span class="pill center">QUÉ INCLUYE</span>
+    <section class="section premium-section">
 
-      <h2>Todo lo que necesitás para empezar</h2>
+      <span class="pill center">
+        QUÉ INCLUYE
+      </span>
+
+      <h2>
+        Todo lo que necesitás para aprender
+        a detectar una mentira
+      </h2>
 
       <p class="section-subtitle">
-        Un curso directo, práctico y explicado paso a paso para aplicar en situaciones reales.
+        Un entrenamiento visual, práctico y explicado paso a paso
+        para entender señales reales y analizar reacciones.
       </p>
 
       <div class="cards-grid">
+
         <div class="card">
+
           <div class="icon">15</div>
+
           <h3>15 videos completos</h3>
-          <p>Clases claras que te enseñan paso a paso a descubrir señales de mentira.</p>
+
+          <p>
+            Entrenamiento paso a paso para aprender a identificar señales de mentira,
+            analizar reacciones y entender lo que las personas intentan ocultar.
+          </p>
+
         </div>
 
         <div class="card">
+
+          <div class="icon">👁</div>
+
+          <h3>Análisis de expresiones y reacciones</h3>
+
+          <p>
+            Vas a aprender a interpretar cambios de comportamiento,
+            tensión corporal y expresiones difíciles de fingir.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🎯</div>
+
+          <h3>El método exacto</h3>
+
+          <p>
+            Un sistema práctico para observar conversaciones,
+            detectar señales y saber cómo actuar.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <div class="icon">🎥</div>
+
+          <h3>Ejemplos visuales</h3>
+
+          <p>
+            Casos explicados de forma clara
+            para reconocer patrones reales.
+          </p>
+
+        </div>
+
+        <div class="card">
+
           <div class="icon">+</div>
-          <h3>Bonus: qué preguntas hacer</h3>
-          <p>Preguntas estratégicas para encontrar contradicciones sin confrontar de más.</p>
+
+          <h3>Bonus incluidos</h3>
+
+          <p>
+            Qué preguntas hacer,
+            cómo reaccionar
+            y errores que hacen que te manipulen.
+          </p>
+
         </div>
 
         <div class="card">
-          <div class="icon">+</div>
-          <h3>Bonus: cómo reaccionar</h3>
-          <p>Qué hacer cuando notás algo raro y cómo mantener el control emocional.</p>
-        </div>
 
-        <div class="card">
           <div class="icon">⚡</div>
+
           <h3>Acceso inmediato</h3>
-          <p>Entrás al curso apenas realizás la compra.</p>
+
+          <p>
+            Entrás al curso apenas realizás la compra
+            y podés verlo desde cualquier dispositivo.
+          </p>
+
         </div>
 
-        <div class="card">
-          <div class="icon">↗</div>
-          <h3>Desde celular o PC</h3>
-          <p>Podés verlo desde cualquier dispositivo y avanzar a tu ritmo.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">∞</div>
-          <h3>Actualizaciones incluidas</h3>
-          <p>Todo nuevo contenido futuro queda incluido dentro del acceso.</p>
-        </div>
       </div>
+
     </section>
 
     <section class="section">
-      <span class="pill center">OPINIONES DEL CURSO</span>
 
-      <h2>Personas que ya empezaron a aplicarlo</h2>
+      <span class="pill center">
+        OPINIONES DEL CURSO
+      </span>
+
+      <h2>
+        Personas que ya empezaron a aplicarlo
+      </h2>
 
       <p class="section-subtitle">
-        Reseñas de alumnos que usaron el contenido en situaciones reales.
+        Reseñas de alumnos que usaron el contenido
+        en situaciones reales.
       </p>
 
       <div class="reviews-grid">
+
         <div class="review-card">
+
           <div class="stars">★★★★★</div>
-          <p>“Me ayudó a entender señales que antes ignoraba. Es claro, práctico y no se siente como teoría pesada.”</p>
+
+          <p>
+            “Me ayudó a entender señales que antes ignoraba.
+            Es claro, práctico y no se siente como teoría pesada.”
+          </p>
+
           <strong>Camila</strong>
+
           <span>Alumna del curso</span>
+
         </div>
 
         <div class="review-card">
+
           <div class="stars">★★★★★</div>
-          <p>“Lo mejor fue aprender qué preguntas hacer sin quedar intenso. Me sirvió muchísimo.”</p>
+
+          <p>
+            “Lo mejor fue aprender qué preguntas hacer
+            sin quedar intenso. Me sirvió muchísimo.”
+          </p>
+
           <strong>Martín</strong>
+
           <span>Alumno del curso</span>
+
         </div>
 
         <div class="review-card">
+
           <div class="stars">★★★★★</div>
-          <p>“Después del curso empecé a notar contradicciones y cambios de actitud que antes pasaba por alto.”</p>
+
+          <p>
+            “Después del curso empecé a notar contradicciones
+            y cambios de actitud que antes pasaba por alto.”
+          </p>
+
           <strong>Sofía</strong>
+
           <span>Alumna del curso</span>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="price-section">
-      <div class="price-left">
-        <span class="pill">ACCESO COMPLETO</span>
 
-        <h2>Invertí en tu tranquilidad y en mejores decisiones</h2>
+      <div class="price-left">
+
+        <span class="pill">
+          ACCESO COMPLETO
+        </span>
+
+        <h2>
+          Invertí en tu tranquilidad
+          y en mejores decisiones
+        </h2>
 
         <ul>
+
           <li>✅ Curso completo con 15 videos</li>
-          <li>✅ Bonus: qué preguntas hacer</li>
-          <li>✅ Bonus: cómo reaccionar</li>
+
+          <li>✅ Bonus incluidos</li>
+
           <li>✅ Acceso inmediato de por vida</li>
+
           <li>✅ Desde celular, tablet o PC</li>
+
+          <li>✅ Actualizaciones futuras incluidas</li>
+
         </ul>
+
       </div>
 
       <div class="price-card">
+
         <span>ACCESO COMPLETO</span>
+
         <h3>USD 27</h3>
+
         <p>PAGO ÚNICO</p>
-        <a href="#" class="main-btn">QUIERO EMPEZAR AHORA →</a>
-        <small>Pago 100% seguro</small>
+
+        <a href="#" class="main-btn">
+          QUIERO EMPEZAR AHORA →
+        </a>
+
+        <small>
+          Pago 100% seguro
+        </small>
+
       </div>
+
     </section>
 
     <section class="section">
-      <span class="pill center">PREGUNTAS FRECUENTES</span>
 
-      <h2>Resolvemos tus dudas</h2>
+      <span class="pill center">
+        PREGUNTAS FRECUENTES
+      </span>
+
+      <h2>
+        Resolvemos tus dudas
+      </h2>
 
       <div class="faq-item">
-        <strong>¿Cuándo accedo al curso?</strong>
-        <p>Inmediatamente después de realizar la compra.</p>
+
+        <strong>
+          ¿Cuándo accedo al curso?
+        </strong>
+
+        <p>
+          Inmediatamente después de realizar la compra.
+        </p>
+
       </div>
 
       <div class="faq-item">
-        <strong>¿Desde dónde puedo verlo?</strong>
-        <p>Desde celular, notebook, tablet o PC.</p>
+
+        <strong>
+          ¿Desde dónde puedo verlo?
+        </strong>
+
+        <p>
+          Desde celular, notebook, tablet o PC.
+        </p>
+
       </div>
 
       <div class="faq-item">
-        <strong>¿Necesito conocimientos previos?</strong>
-        <p>No. Está pensado para cualquier persona.</p>
+
+        <strong>
+          ¿Necesito conocimientos previos?
+        </strong>
+
+        <p>
+          No. Está pensado para cualquier persona.
+        </p>
+
       </div>
 
       <div class="faq-item">
-        <strong>¿El curso queda disponible?</strong>
-        <p>Sí. Podés verlo a tu ritmo todas las veces que quieras.</p>
+
+        <strong>
+          ¿El curso queda disponible?
+        </strong>
+
+        <p>
+          Sí. Podés verlo a tu ritmo todas las veces que quieras.
+        </p>
+
       </div>
+
     </section>
 
   </main>
 
   <footer>
-    <h2>La verdad muchas veces deja señales.</h2>
-    <p>Este curso tiene fines educativos y de desarrollo personal. La interpretación y aplicación del contenido es responsabilidad exclusiva del usuario.</p>
-    <a href="#" class="main-btn">QUIERO ACCEDER AHORA →</a>
+
+    <h2>
+      La verdad muchas veces deja señales.
+    </h2>
+
+    <p>
+      Este curso tiene fines educativos y de desarrollo personal.
+      La interpretación y aplicación del contenido
+      es responsabilidad exclusiva del usuario.
+    </p>
+
+    <a href="#" class="main-btn">
+      QUIERO ACCEDER AHORA →
+    </a>
+
   </footer>
 
 </body>
