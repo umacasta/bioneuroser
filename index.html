@@ -574,7 +574,7 @@ margin-bottom:14px;
 
     <img src="logo.png" class="logo" alt="Logo">
 
-   <a href="https://go.hotmart.com/Y106074486B" class="top-btn" onclick="fbq('track', 'InitiateCheckout'); setTimeout(function(){ window.location.href='https://go.hotmart.com/Y106074486B'; }, 300); return false;">
+   <a href="https://go.hotmart.com/Y106074486B" class="top-btn" target="_blank" rel="noopener noreferrer">
   ACCESO AHORA
 </a>
 
@@ -610,7 +610,7 @@ margin-bottom:14px;
 
         </div>
 
-      <a href="https://go.hotmart.com/Y106074486B" class="main-btn" onclick="fbq('track', 'InitiateCheckout'); setTimeout(function(){ window.location.href='https://go.hotmart.com/Y106074486B'; }, 300); return false;">
+      <a href="https://go.hotmart.com/Y106074486B" class="main-btn" target="_blank" rel="noopener noreferrer">
   QUIERO ACCEDER AHORA →
 </a>
 
@@ -912,7 +912,7 @@ margin-bottom:14px;
 
   <p>PAGO ÚNICO</p>
 
-<a href="https://go.hotmart.com/Y106074486B" class="main-btn" onclick="fbq('track', 'InitiateCheckout'); setTimeout(function(){ window.location.href='https://go.hotmart.com/Y106074486B'; }, 300); return false;">
+<a href="https://go.hotmart.com/Y106074486B" class="main-btn" target="_blank" rel="noopener noreferrer">
   QUIERO EMPEZAR AHORA →
 </a>
 
@@ -998,7 +998,7 @@ margin-bottom:14px;
       es responsabilidad exclusiva del usuario.
     </p>
 
-   <a href="https://go.hotmart.com/Y106074486B" class="main-btn" onclick="fbq('track', 'InitiateCheckout'); setTimeout(function(){ window.location.href='https://go.hotmart.com/Y106074486B'; }, 300); return false;">
+   <a href="https://go.hotmart.com/Y106074486B" class="main-btn" target="_blank" rel="noopener noreferrer">
   QUIERO ACCEDER AHORA →
 </a>
 
@@ -1014,5 +1014,22 @@ player.on('ended', function() {
     document.getElementById('videoBox').style.display = 'none';
 });
 </script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hotmartLinks = document.querySelectorAll('a[href="https://go.hotmart.com/Y106074486B"]');
+
+  hotmartLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (typeof fbq === 'function') {
+        fbq('track', 'InitiateCheckout');
+      }
+    });
+  });
+});
+</script>
+
 </body>
 </html>
