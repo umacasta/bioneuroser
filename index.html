@@ -1080,7 +1080,10 @@ document.addEventListener('DOMContentLoaded', function() {
   hotmartLinks.forEach(function(link) {
     link.addEventListener('click', function() {
       if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout');
+        fbq('track', 'InitiateCheckout', {
+          value: 43000,
+          currency: 'ARS'
+        });
       }
     });
   });
